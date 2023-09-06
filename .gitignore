@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+
+# Track only the following files
+!README.md
+!.gitignore
+!install.sh
+!.bashrc_aliases
+!.vimrc
