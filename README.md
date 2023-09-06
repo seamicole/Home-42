@@ -24,7 +24,25 @@ git clone https://github.com/seamicole/Home-42.git && cd Home-42 && ./install.sh
 
 ## Vim
 
-Coming Soon...
+### NERDTree
+
+Although NERDTree provides you with a handy file tree explorer, there is no point-and-click interface. You can navigate the files in a similar way you would code in Vim. To toggle between the NERDTree file explorer and the file you're editing, use <ctrl> + w + w.
+
+If you wish to collapse the NERDTree sidebar, you can use <ctrl> + t. If you wish to collapse NERDTree as well as the line numbers and Git Gutter, use <F5>. This is especially useful for highlighting and copying file content to your clipboard. If you try to do this with your sidebars open, you'll get a lot of extra junk in your clipboard!
+
+See https://github.com/preservim/nerdtree for more info on how to use NERDTree.
+
+### Vim Fugitive (Git integration)
+
+Vim Fugitive allows for managing your git commands directly through Vim.
+
+Use `:G` to get an overview on your current repo's git status. Here, you can view all your tracked and untracked files for staging. You can navigate to a file and hit `=` to see all the new changes made to that file.
+
+You can use `s` to stage one or multiple files depending on where the line cursor is focused. Once staged, you can use `:G commit -m "A helpful commit message"` to commit that file, and then `:G push` to push the file.
+
+See https://github.com/tpope/vim-fugitive for more info on how to use Fugitive.
+
+
 
 
 Questions, comments, concerns, please find Sean (so-leary) @ 42SG.
