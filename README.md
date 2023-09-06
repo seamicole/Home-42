@@ -26,9 +26,9 @@ git clone https://github.com/seamicole/Home-42.git && cd Home-42 && ./install.sh
 
 ### NERDTree
 
-Although NERDTree provides you with a handy file tree explorer, there is no point-and-click interface. You can navigate the files in a similar way you would code in Vim. To toggle between the NERDTree file explorer and the file you're editing, use <ctrl> + w + w.
+Although NERDTree provides you with a handy file tree explorer, there is no point-and-click interface. You can navigate the files in a similar way you would code in Vim. To toggle between the NERDTree file explorer and the file you're editing, use `ctrl + w + w`.
 
-If you wish to collapse the NERDTree sidebar, you can use <ctrl> + t. If you wish to collapse NERDTree as well as the line numbers and Git Gutter, use <F5>. This is especially useful for highlighting and copying file content to your clipboard. If you try to do this with your sidebars open, you'll get a lot of extra junk in your clipboard!
+If you wish to collapse the NERDTree sidebar, you can use `ctrl + t`. If you wish to collapse NERDTree as well as the line numbers and Git Gutter, use `F5`. This is especially useful for highlighting and copying file content to your clipboard. If you try to do this with your sidebars open, you'll get a lot of extra junk in your clipboard!
 
 See https://github.com/preservim/nerdtree for more info on how to use NERDTree.
 
