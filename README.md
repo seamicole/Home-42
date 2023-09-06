@@ -5,7 +5,7 @@ A repository for persistent setup and configuration files in the Linux home dire
 
 There are two options for installation:
 
-1. Initialize your Home directory as a git repo linked directly to this repo
+1. Initialize your Home directory as a git repo linked directly to this repo.
   - Benefits: You can `git pull` directly from your Home directory for any updates to this repo.
 	- Drawbacks: If you like to customize any of the files managed in this repo (e.g. .vimrc), then pulling future updates may cause git merge conflicts.
 	- Installation:
