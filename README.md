@@ -16,6 +16,7 @@ git init -b main && git remote add origin https://github.com/seamicole/Home-42.g
 2. Clone this repository in a separate directory and run install.sh from there.
 	- Benefits: Good for a one-time, non-intrusive install.
 	- Drawbacks: You'll need to manage getting latest updates from this repo as you see fit.
+	- Installation:
 
 ```bash
 git clone https://github.com/seamicole/Home-42.git && cd Home-42 && ./install.sh
@@ -23,6 +24,7 @@ git clone https://github.com/seamicole/Home-42.git && cd Home-42 && ./install.sh
 
 ## Vim
 
+Coming Soon...
 
 
 Questions, comments, concerns, please find Sean (so-leary) @ 42SG.
