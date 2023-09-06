@@ -44,7 +44,6 @@ You can use `s` to stage one or multiple files depending on where the line curso
 
 See https://github.com/tpope/vim-fugitive for more info on how to use Fugitive.
 
-
-
+## Questions, Comments, Concerns
 
 Questions, comments, concerns, please find Sean (so-leary) @ 42SG.
