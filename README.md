@@ -30,7 +30,7 @@ Although NERDTree provides you with a handy file tree explorer, there is no poin
 
 If you wish to collapse the NERDTree sidebar, you can use `ctrl + t`. If you wish to collapse NERDTree as well as the line numbers and Git Gutter, use `F5`. This is especially useful for highlighting and copying file content to your clipboard. If you try to do this with your sidebars open, you'll get a lot of extra junk in your clipboard!
 
-To create, copy, or move files, hit `m` while in the NERDTree panel to access the options menu.
+To create, copy, move files, etc., hit `m` while in the NERDTree panel to access the options menu. For instance, to create a new file, you would find that you would need to type `ma` according to the options menu.
 
 See https://github.com/preservim/nerdtree for more info on how to use NERDTree.
 
