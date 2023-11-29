@@ -53,3 +53,29 @@ vim +'PlugInstall --sync' +qa
 
 # Print success message
 echo "Vim configured successfully!"
+
+# Print message
+echo "Installing Ripgrep!"
+
+# Define the URL and the target directory
+URL="https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-x86_64-unknown-linux-musl.tar.gz"
+TARGET_DIR="$HOME/bin"
+
+# Download the file
+wget "$URL" -O ripgrep.tar.gz
+
+# Extract the file
+tar -xzf ripgrep.tar.gz
+
+# Create the target directory if it doesn't exist
+mkdir -p "$TARGET_DIR"
+
+# Move the binary to the target directory
+# Assuming the structure of the tarball, adjust if needed
+mv ripgrep-14.0.3-x86_64-unknown-linux-musl/rg "$TARGET_DIR/"
+
+# Clean up downloaded and extracted files
+rm -rf ripgrep.tar.gz ripgrep-14.0.3-x86_64-unknown-linux-musl
+
+# Print success message
+echo "Ripgrep configured successfully!"
