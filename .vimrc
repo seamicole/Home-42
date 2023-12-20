@@ -30,6 +30,10 @@ set number
 let &colorcolumn = "80"
 
 " ┌─────────────────────────────────────────────────────────────────────────────
+" Set tabstop to 4
+set tabstop=4
+set shiftwidth=4
+
 " │ VIM PLUG
 " └─────────────────────────────────────────────────────────────────────────────
 
@@ -58,6 +62,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 
 " GIT ──────────────────────────────────────────────────────────────────────────
+" SEARCH ───────────────────────────────────────────────────────────────────────────────
+
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
@@ -134,8 +144,33 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeIgnore = ['__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
 
 " ┌─────────────────────────────────────────────────────────────────────────────
+" ┌─────────────────────────────────────────────────────────────────────────────────────
+" │ COMMANDS
+" └─────────────────────────────────────────────────────────────────────────────────────
+
+" Define a Shove command that pushes to intra and Github
+command! Shove !git push && git push github master
+
+" ┌─────────────────────────────────────────────────────────────────────────────────────
 " │ KEY MAPPINGS
-" └─────────────────────────────────────────────────────────────────────────────
+" └─────────────────────────────────────────────────────────────────────────────────────
+
+" Remap files command
+nnoremap <C-f> :Files<Cr>
+
+" Remap grep command
+" This ensures that files are not opened in the NERDTree window
+" See https://github.com/junegunn/fzf/issues/453
+nnoremap <silent> <expr> <C-g> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Rg<Cr>"
+
+" Remap ctrl + s to save from normal mode
+nmap <c-s> :w<CR>
+
+" Remap ctrl + s to escape and save from insert mode
+imap <c-s> <Esc>:w<CR>
+
+" Remap ctrl + c to copy visual block to clipboard
+vmap <c-c> "+y
 
 function! ToggleSidebar()
 
@@ -171,7 +206,7 @@ function! ToggleSidebar()
 endfunction
 
 " Map F5 to toggle sidebar
-nnoremap <F5> :call ToggleSidebar()<CR>
+nnoremap <F2> :call ToggleSidebar()<CR>
 
 " ┌─────────────────────────────────────────────────────────────────────────────
 " │ FILE-SPECIFIC KEY MAPPINGS
